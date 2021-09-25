@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive Layout</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+<body>
+
+    <!-- Header and Main body-->
+    <main id="main">
+
+        <!--Header-->
+        <header id="main-header">
+            <h4 id="resp">Responsive Layout</h4>
+
+            <!--Navigation bar-->
+            <div class="navigation">
+                <nav class="nav-bar">
+                    <a href="#home">Home</a>
+                    <a href="#Generic">Generic</a>
+                    <a href="#Elements">Elements</a>
+                </nav>
+
+                <!--Hamburger Nav-->
+                <div class="hamburger">
+                    <i class="fa fa-bars hamburger-menu"></i>
+                    <div class="hamburger-nav">
+                        <div class="nav-list">
+                            <div class="home">
+                                <a href="#home">Home</a>
+                                <i class="fa fa-times"></i>
+                            </div>
+                            <a href="#Generic">Generic</a>
+                            <a href="#Elements">Elements</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Hamburger ends-->
+
+            </div>
+
+            <!--Navigation bar ends-->
+        </header>
+
+        <!--Main body-->
+        <section class="main-content">
+            <h1>Welcome</h1>
+
+            <div class="content-choose">
+
+                <div class="choose">
+                    <i class="fa fa-car"></i>
+                    <h3>Travel</h3>
+                    <p>Choose to ride</p>
+                </div>
+
+                <div class="choose">
+                    <i class="fa fa-camera"></i>
+                    <h3>Gallery</h3>
+                    <p>Choose photos</p>
+                </div>
+
+            </div>
+            <button class="btn" >Get Started</button>
+
+        </section>
+
+    </main>
+    <!--Main ends-->
+
+    <!--Footer-->
+    <footer id="responsive-footer">
+
+        <!--Footer section 1-->
+        <section class="footer-section">
+            <img src="./images/mobile.jpeg" alt="mobile">
+            <h2>Lorem ipsum dolor<br/> sitor sit.</h2>
+            <p>Lorem ipsum dolor sit amet <br/>consectetur.Eveniet<br/>dolor sit amet consectetur</p>
+            <button class="btn">Learn More</button>
+        </section>
+
+        <!--Footer Section 2-->
+        <section class="footer-section camera">
+            <img src="./images/camera.jpg" alt="camera">
+            <h2>Lorem ipsum dolor<br> sit amet.</h2>
+            <p>Incidunt voluptatem soluta est <br/>harum beatae quis non saepe <br/>facilis itaque praesentium</p>
+            <button class="btn">Learn More</button>
+        </section>
+        
+    </footer>
+    <!--Footer ends-->
+    <script>
+        $(document).ready(function(){
+            $(".hamburger-menu").click(function(){
+                $(".hamburger-nav").toggleClass("xyz");
+            });
+            $(".hamburger-nav i").on("click",function(){
+                $(".hamburger-nav").removeClass("xyz");
+            });
+        })
+    </script>
+
+</body>
+</html>
